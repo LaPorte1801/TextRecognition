@@ -167,6 +167,7 @@ namespace TextRecognition
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
             mediaPlayer.Stop();
+            tbPlaybackState.Text = "00:00 / 00:00";
             mediaPlayer.Close();
 
             btnPause.IsEnabled = false;
@@ -269,7 +270,6 @@ namespace TextRecognition
                             client.DownloadFile(resultJson.audio, _tempFilePath);
                         }
                     }
-
                 });
 
                 btnGetSynthText.IsEnabled = true;
