@@ -21,16 +21,12 @@ namespace TextRecognition
         private string _filePath;
         private string _lang;
 
-        static readonly HttpClient client = new HttpClient();
-
         private MediaPlayer mediaPlayer = new MediaPlayer();
         private bool userIsDraggingSlider = false;
         private string _tempFileName;
         private string _tempFilePath;
 
         private string _recognizedData;
-
-        public string _recivedData { get; set; }
 
         public MainWindow()
         {
