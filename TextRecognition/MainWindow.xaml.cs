@@ -168,6 +168,7 @@ namespace TextRecognition
         {
             mediaPlayer.Stop();
             tbPlaybackState.Text = "00:00 / 00:00";
+            sliderAudioPlayback.Value = 0;
             mediaPlayer.Close();
 
             btnPause.IsEnabled = false;
