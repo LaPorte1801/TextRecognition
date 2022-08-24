@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using Tesseract;
 using Flurl.Http;
+using System.Windows.Input;
 
 namespace TextRecognition
 {
@@ -36,7 +37,16 @@ namespace TextRecognition
             _tempFileName = "";
             _tempFilePath = "";
             DirectoryInfo currDirectory = new DirectoryInfo("./tessdata");
-            FileInfo[] langFiles = currDirectory.GetFiles();
+            FileInfo[] langFiles = null;
+            try
+            {
+                langFiles = currDirectory.GetFiles();
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                Environment.Exit(1);
+            }
 
             string[] _langs = new string[langFiles.Length];
 
