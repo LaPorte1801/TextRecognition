@@ -27,7 +27,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock x:Name="tbDebug" Grid.Column="0" Grid.Row="1" Text="" TextWrapping="Wrap"/>
+            <TextBlock x:Name="tbDebug" Grid.Column="0" Grid.Row="1" Text="" Margin="10" TextWrapping="Wrap"/>
             
             <Button x:Name="btnOpenFile" Grid.Column="2" Grid.Row="0" Content="Выбрать файл" FontSize="16" Margin="10" VerticalAlignment="Top" Click="BtnOpenFile_Click"/>
             <TextBox x:Name="tbxFilePath" Grid.Column="1" Grid.Row="0" Height="25" Margin="10" TextWrapping="Wrap" Text="Выберите изображение" FontSize="16" FontStyle="Italic" Foreground="DarkGray" VerticalAlignment="Top" GotFocus="tbxFilePath_GotFocus" LostFocus="tbxFilePath_LostFocus" KeyUp="tbxFilePath_KeyUp"/>
